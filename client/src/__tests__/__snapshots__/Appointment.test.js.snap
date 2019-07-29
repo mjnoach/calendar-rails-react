@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render renders appointment correctly 1`] = `
+<div
+  className="appointment"
+>
+  <h2>
+    Appointment
+  </h2>
+  <a
+    href="/appointments/1"
+    onClick={[Function]}
+  >
+    <h3>
+      Team standup meeting
+    </h3>
+  </a>
+  <p>
+    June 12 2019, 12:00:00 pm
+  </p>
+  <a
+    href="/appointments/1/edit"
+    onClick={[Function]}
+  >
+    Edit
+  </a>
+</div>
+`;
