@@ -25,7 +25,7 @@ export default class Appointments extends React.Component {
 		if (this.props.match && sessionStorage.user) {
 			$.ajax({
 				type: "GET",
-				url: "http://localhost:3001/appointments/",
+				url: "http://localhost:3000/appointments/",
 				dataType: "JSON",
 				headers: JSON.parse(sessionStorage.getItem('user'))
 			}).done((data) => {

@@ -7642,3 +7642,65 @@ Processing by AppointmentsController#index as HTML
 Completed 200 OK in 241ms (Views: 1.6ms | ActiveRecord: 1.9ms)
 
 
+Started GET "/auth/validate_token" for ::1 at 2019-08-05 04:18:33 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/andrzej/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by DeviseTokenAuth::TokenValidationsController#validate_token as HTML
+Completed 401 Unauthorized in 10ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/validate_token" for ::1 at 2019-08-05 04:19:07 +0200
+Processing by DeviseTokenAuth::TokenValidationsController#validate_token as HTML
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/validate_token" for ::1 at 2019-08-05 04:21:04 +0200
+Processing by DeviseTokenAuth::TokenValidationsController#validate_token as HTML
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/validate_token" for 127.0.0.1 at 2019-08-05 04:21:25 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/andrzej/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by DeviseTokenAuth::TokenValidationsController#validate_token as JSON
+Completed 401 Unauthorized in 4ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/validate_token" for ::1 at 2019-08-05 04:21:29 +0200
+Processing by DeviseTokenAuth::TokenValidationsController#validate_token as HTML
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/auth/sign_in" for ::1 at 2019-08-05 04:21:30 +0200
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test123@example.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "test123@example.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ /Users/andrzej/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/andrzej/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"3gBQC5jm7Sry9rYYgI2zAQ\":{\"token\":\"$2a$12$tJvUTwYHn1gvOr9G5NFQ.uSRnftk6ML6HMX.GORc49p83zJHv2Qee\",\"expiry\":1565610675},\"CIheOitzw0TX8fl3c2kWuw\":{\"token\":\"$2a$12$8aEM.999ZHXKgkvlBN2DqOdaaBcEyEaqYlk6SxijBn/v6Xo5yhUUS\",\"expiry\":1565614318},\"QLBidovVABMeuq34W1HByg\":{\"token\":\"$2a$12$HN9/QWAiC7wo5AIutSPY5uaj6xz0zId.dZVpAujt8A0T13M.G.8fW\",\"expiry\":1565615269},\"ZNbgTPp6n9WjKbCB9Q_ifw\":{\"token\":\"$2a$12$nV8.SioFB/naPLWOrr5mZOoi.LQm7JUVzo9VHUoRcE3Li3hSB4xQW\",\"expiry\":1565617586},\"3ehktTEH_v1IIuPq4AyOhw\":{\"token\":\"$2a$12$h.Yy19TKbxmQfYxZSTDKrOpviRQ5T8vFqhfVgCryFzBdyI5T8D.e6\",\"expiry\":1566181290}}"], ["updated_at", "2019-08-05 02:21:30.567811"], ["id", 2]]
+  ↳ /Users/andrzej/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/andrzej/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/andrzej/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 15], ["current_sign_in_at", "2019-08-05 02:21:30.570650"], ["last_sign_in_at", "2019-07-29 13:46:26.709847"], ["updated_at", "2019-08-05 02:21:30.571436"], ["id", 2]]
+  ↳ /Users/andrzej/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/andrzej/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/andrzej/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 345ms (Views: 0.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/appointments/" for ::1 at 2019-08-05 04:21:30 +0200
+Processing by AppointmentsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "test123@example.com"], ["LIMIT", 1]]
+  ↳ /Users/andrzej/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."user_id" = ? ORDER BY appt_time ASC[0m  [["user_id", 2]]
+  ↳ app/controllers/appointments_controller.rb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/andrzej/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 232ms (Views: 1.3ms | ActiveRecord: 0.9ms)
+
+

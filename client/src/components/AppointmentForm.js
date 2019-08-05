@@ -37,7 +37,7 @@ export default class AppointmentForm extends React.Component {
 		if (this.props.match) {
 			$.ajax({
 				type: "GET",
-				url: `http://localhost:3001/appointments/${this.props.match.params.id}`,
+				url: `http://localhost:3000/appointments/${this.props.match.params.id}`,
 				dataType: "JSON",
 				headers: JSON.parse(sessionStorage.user)
 			}).done((data) => {
@@ -97,7 +97,7 @@ export default class AppointmentForm extends React.Component {
 		};
 		$.ajax({
 			type: "PATCH",
-			url: `http://localhost:3001/appointments/${this.props.match.params.id}`,
+			url: `http://localhost:3000/appointments/${this.props.match.params.id}`,
 			data: {appointment: appointment},
 			headers: JSON.parse(sessionStorage.getItem('user'))
 		})
@@ -121,7 +121,7 @@ export default class AppointmentForm extends React.Component {
 		};		
 		$.ajax({
 			type: 'POST',
-			url: 'http://localhost:3001/appointments',
+			url: 'http://localhost:3000/appointments',
 			data: {appointment: appointment},
 			headers: JSON.parse(sessionStorage.getItem('user'))
 		})
@@ -141,7 +141,7 @@ export default class AppointmentForm extends React.Component {
 		if (window.confirm("Are you sure you want to delete this appointment?")) {
 			$.ajax({
 				type: "DELETE",
-				url: `http://localhost:3001/appointments/${this.props.match.params.id}`,
+				url: `http://localhost:3000/appointments/${this.props.match.params.id}`,
 				headers: JSON.parse(sessionStorage.getItem('user'))
 			})
 				.done((data) => {

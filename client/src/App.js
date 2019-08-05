@@ -14,7 +14,7 @@ export default class App extends React.Component {
   componentDidMount () {
     $.ajax({
       type: 'GET',
-      url: 'http://localhost:3001/appointments'
+      url: 'http://localhost:3000/appointments'
     })
       .done((data) => {
         console.log(data);

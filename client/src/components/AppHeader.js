@@ -8,7 +8,7 @@ export default class AppHeader extends React.Component {
 	componentDidMount() {
 		$.ajax({
 			type: 'GET',
-			url: 'http://localhost:3001/auth/validate_token',
+			url: 'http://localhost:3000/auth/validate_token',
 			dataType: 'JSON',
 			headers: JSON.parse(sessionStorage.getItem('user'))
 		})
@@ -21,7 +21,7 @@ export default class AppHeader extends React.Component {
 		e.preventDefault();
 		$.ajax({
 			type: 'DELETE',
-			url: 'http://localhost:3001/auth/sign_out',
+			url: 'http://localhost:3000/auth/sign_out',
 			data: JSON.parse(sessionStorage.getItem('user'))
 		})
 			.done(() => {
