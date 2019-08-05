@@ -38,6 +38,7 @@ debug.log
 node_modules/
 package-lock.json
 pkg/
-/tmp/
+*/tmp/
+*/tmp/*
 /yarn-error.log
 /test-reports/
