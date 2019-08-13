@@ -4,6 +4,7 @@ Rails backend + React frontend
 **frontend:**  
 
 `bundle install`  
+
 `rails s`
 
 **backend:**  
